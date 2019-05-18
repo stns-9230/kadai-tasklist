@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    flash = 'ログアウトしました。'
+    flash[:success] = 'ログアウトしました。'
     redirect_to tasks_url
   end
   
